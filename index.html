@@ -3,9 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="BIEC PhoTech Club — a community for photography and technology enthusiasts. Learn, create, and share.">
+    <title>BIEC PhoTech Club</title>
+    <link rel="icon" type="image/x-icon" href="image/BIEC icon.ico">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- Header / Navigation -->
+    <header class="site-header" id="siteHeader">
+        <a href="#home" class="brand">
+            <img src="image/BIEC icon.png" alt="BIEC logo" class="brand-logo">
+            <span class="brand-name">BIEC <span class="brand-accent">PhoTech</span> Club</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Primary">
+            <a href="#home" class="nav-link is-active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#activities" class="nav-link">Activities</a>
+            <a href="#events" class="nav-link">Events</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#join" class="nav-link nav-link-cta">Join Us</a>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <!-- Rotating real-camera photo background (Sony / Nikon / Canon).
+             To use your own photos instead, replace the "src" URLs below with
+             local paths such as "image/sony.jpg". -->
+        <div class="hero-media" id="heroMedia" aria-hidden="true">
+            <img class="hero-media-img is-active" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1920&q=80" alt="Sony camera">
+            <img class="hero-media-img" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1920&q=80" alt="Nikon camera">
+            <img class="hero-media-img" src="https://images.unsplash.com/photo-1519183071298-a2962feb14f4?auto=format&fit=crop&w=1920&q=80" alt="Canon camera">
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Photography &middot; Technology &middot; Creativity</p>
+            <h1 class="hero-title">Capture the moment.<br>Build the future.</h1>
+            <p class="hero-subtitle">
+                BIEC PhoTech Club brings together shutterbugs and tech enthusiasts to
+                learn, experiment, and create. From the lens to the code, there's a place
+                for you here.
+            </p>
+            <p class="hero-brands">Sony &middot; Nikon &middot; Canon — shoot with what you love</p>
+            <div class="hero-actions">
+                <a href="#join" class="btn btn-primary">Become a Member</a>
+                <a href="#activities" class="btn btn-ghost">Explore What We Do</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="Scroll down">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">A home for everyone who sees the world through a lens — and tinkers with what's behind it.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">&#128247;</div>
+                    <h3>Our Mission</h3>
+                    <p>To nurture creativity and technical skill by connecting photography with the latest technology, and to give every member a platform to grow and be seen.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">&#128300;</div>
+                    <h3>What We Believe</h3>
+                    <p>Great images don't come from gear alone — they come from curiosity, practice, and a community that shares what it learns.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">&#129309;</div>
+                    <h3>Our Community</h3>
+                    <p>Beginners and pros, photographers and coders — we learn together through workshops, photowalks, and hands-on projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="section section-alt" id="activities">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">What We Do</h2>
+                <p class="section-subtitle">A mix of art and engineering, explored through hands-on sessions.</p>
+            </div>
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <div class="activity-num">01</div>
+                    <h3>Photography</h3>
+                    <p>Composition, lighting, and post-processing. From phone cameras to DSLRs, we help you shoot better.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-num">02</div>
+                    <h3>Videography</h3>
+                    <p>Storytelling through motion — framing, editing, and creating short films and reels.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-num">03</div>
+                    <h3>Technology</h3>
+                    <p>Photo editing software, drones, camera tech, and creative coding — the tools behind the craft.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-num">04</div>
+                    <h3>Workshops</h3>
+                    <p>Guest speakers, tutorial sessions, and collaborative projects that level up your skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section" id="events">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Mark your calendar and come create with us.</p>
+            </div>
+            <div class="events-list">
+                <div class="event">
+                    <div class="event-date">
+                        <span class="event-day">25</span>
+                        <span class="event-month">Oct</span>
+                    </div>
+                    <div class="event-body">
+                        <h3>Golden Hour Photowalk</h3>
+                        <p>Meet at the campus quad for a sunset walk and a crash course on natural light.</p>
+                    </div>
+                    <span class="event-tag">Photography</span>
+                </div>
+                <div class="event">
+                    <div class="event-date">
+                        <span class="event-day">08</span>
+                        <span class="event-month">Nov</span>
+                    </div>
+                    <div class="event-body">
+                        <h3>Intro to Photo Editing</h3>
+                        <p>A hands-on workshop covering color grading and retouching with free editing tools.</p>
+                    </div>
+                    <span class="event-tag">Workshop</span>
+                </div>
+                <div class="event">
+                    <div class="event-date">
+                        <span class="event-day">22</span>
+                        <span class="event-month">Nov</span>
+                    </div>
+                    <div class="event-body">
+                        <h3>Drone &amp; Camera Tech Demo</h3>
+                        <p>Explore aerial photography and the latest camera gear, with live demonstrations.</p>
+                    </div>
+                    <span class="event-tag">Technology</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section section-alt" id="gallery">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-subtitle">A showcase of moments captured by our members.</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- Replace each placeholder below with your own <img src="..."> -->
+                <figure class="gallery-item">
+                    <div class="gallery-placeholder">&#128247;</div>
+                    <figcaption>Member Showcase</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <div class="gallery-placeholder">&#127757;</div>
+                    <figcaption>Landscape</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <div class="gallery-placeholder">&#128100;</div>
+                    <figcaption>Portrait</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <div class="gallery-placeholder">&#127961;</div>
+                    <figcaption>Street</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <div class="gallery-placeholder">&#127752;</div>
+                    <figcaption>Events</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <div class="gallery-placeholder">&#128064;</div>
+                    <figcaption>Details</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join -->
+    <section class="section" id="join">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Join the Club</h2>
+                <p class="section-subtitle">Whether you hold a camera or write code, we'd love to have you on board.</p>
+            </div>
+            <div class="join-grid">
+                <div class="join-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have a question, or want to collaborate on a project? Drop us a message.</p>
+                    <ul class="join-details">
+                        <li>&#128205; <span>BIEC Campus, Student Activities Center</span></li>
+                        <li>&#128337; <span>Meetings every Friday, 4:00 PM</span></li>
+                        <li>&#9993; <span>photech@biec.edu</span></li>
+                    </ul>
+                </div>
+                <form class="join-form" id="joinForm">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="interest">What are you interested in?</label>
+                        <select id="interest" name="interest">
+                            <option value="photography">Photography</option>
+                            <option value="videography">Videography</option>
+                            <option value="technology">Technology</option>
+                            <option value="general">Just want to join</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us a little about yourself..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <p class="form-status" id="formStatus" role="status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="#home" class="brand footer-brand">
+                <img src="image/BIEC icon.png" alt="BIEC logo" class="brand-logo">
+                <span class="brand-name">BIEC <span class="brand-accent">PhoTech</span> Club</span>
+            </a>
+            <p class="footer-text">&copy; <span id="year"></span> BIEC PhoTech Club. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="YouTube">YT</a>
+                <a href="#" aria-label="Facebook">FB</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
