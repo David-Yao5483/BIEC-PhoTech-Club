@@ -377,6 +377,46 @@ a {
     font-size: 1.05rem;
 }
 
+/* --------------------------------------------------------------------------
+   Gallery page hero (used by individual gallery pages)
+   -------------------------------------------------------------------------- */
+.page-hero {
+    padding: calc(var(--header-h) + 72px) 24px 56px;
+    text-align: center;
+    background:
+        radial-gradient(50% 60% at 82% 12%, rgba(56, 189, 248, 0.18), transparent 60%),
+        radial-gradient(45% 55% at 12% 85%, rgba(251, 146, 60, 0.16), transparent 60%),
+        var(--bg);
+}
+
+.page-title {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.page-subtitle {
+    color: var(--muted);
+    font-size: 1.1rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Gallery link (clickable gallery tiles)
+   -------------------------------------------------------------------------- */
+.gallery-link {
+    display: block;
+    height: 100%;
+    transition: transform var(--transition);
+}
+
+.gallery-link:hover {
+    transform: translateY(-6px);
+}
+
 /* About */
 .about-grid {
     display: grid;
