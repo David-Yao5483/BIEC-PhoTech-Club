@@ -135,9 +135,12 @@
         });
     }
 
-    /* Contact form */
+    /* Contact form — builds an email draft in the visitor's default mail app */
     var form = document.getElementById("joinForm");
     var status = document.getElementById("formStatus");
+
+    /* Club inbox that receives submissions. */
+    var CONTACT_EMAIL = "xuanyu.yao.biec@bashuschool.cn";
 
     if (form && status) {
         form.addEventListener("submit", function (event) {
@@ -145,6 +148,8 @@
 
             var name = document.getElementById("name");
             var email = document.getElementById("email");
+            var interest = document.getElementById("interest");
+            var message = document.getElementById("message");
 
             if (!name.value.trim() || !email.value.trim()) {
                 status.textContent = "Please fill in your name and email.";
@@ -152,9 +157,55 @@
                 return;
             }
 
-            status.textContent = "Thanks for reaching out! We'll get back to you soon.";
-            status.classList.remove("is-error");
-            form.reset();
+            var interestLabel = interest.options[interest.selectedIndex].text;
+            var submittedAt = new Date().toLocaleString();
+            var userMessage = message.value.trim() || "(No additional message)";
+
+            /* Collect everything the visitor entered, plus context from the site. */
+            var subject = "PhoTech Club Inquiry — " + name.value.trim();
+
+            var bodyLines = [
+                "Hello BIEC PhoTech Club,",
+                "",
+                userMessage,
+                "",
+                "----------------------------------------",
+                "Submitted details",
+                "----------------------------------------",
+                "Name: " + name.value.trim(),
+                "Email: " + email.value.trim(),
+                "Interested in: " + interestLabel,
+                "Submitted on: " + submittedAt,
+                "Sent from: BIEC PhoTech Club website",
+                "Page: " + window.location.href,
+                "----------------------------------------",
+                "",
+                "Club information",
+                "----------------------------------------",
+                "Club: BIEC PhoTech Club",
+                "Location: BIEC Campus, Classroom 210",
+                "Meetings: Biweekly Monday, 4:20 PM",
+                "Contact: " + CONTACT_EMAIL
+            ];
+
+            var mailto =
+                "mailto:" +
+                CONTACT_EMAIL +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(bodyLines.join("\r\n"));
+
+            /* mailto: URLs are limited by some clients; warn if unusually long. */
+            if (mailto.length > 2000) {
+                status.textContent =
+                    "Your message is quite long and may be cut off by your email app.";
+                status.classList.add("is-error");
+            } else {
+                status.textContent =
+                    "Opening your email app with a prefilled draft...";
+                status.classList.remove("is-error");
+            }
+
+            window.location.href = mailto;
         });
     }
 })();
